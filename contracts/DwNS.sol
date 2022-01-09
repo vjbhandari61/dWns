@@ -81,8 +81,8 @@ contract BNS is ERC1155{
     function reserveForAdmin(uint tokenId) public {
         // reserveForAdmin(token_ids);
         tokenId = tokenId + 2;
-        uint iotricShare = (totalSupply * 10)/ 100;
-        safeTransferFrom(msg.sender, owner, tokenId, iotricShare, "");
+        uint companyShare = (totalSupply * 10)/ 100;
+        safeTransferFrom(msg.sender, owner, tokenId, companyShare, "");
     }
 
     function sellTld(uint tokenId, uint price) public {
